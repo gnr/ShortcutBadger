@@ -2,15 +2,25 @@ apply plugin: 'com.android.library'
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
 }
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    buildToolsVersion "26.0.2"
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 26
+        minSdkVersion 15
+        targetSdkVersion 25
         consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    buildTypes {
+        debug {}
+        debugProguard {}
+        release {}
     }
 }
