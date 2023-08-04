@@ -23,4 +23,5 @@ android {
         debugProguard {}
         release {}
     }
+    namespace 'me.leolin.shortcutbadger'
 }
